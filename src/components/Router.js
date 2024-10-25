@@ -6,6 +6,7 @@ import NotFound from './NotFound'
 import LoadSerie from './LoadSerie'
 import CreatePersonaje from './CreatePersonaje'
 import UpdatePersonaje from './UpdatePersonaje'
+import LoadPersonajes from './LoadPersonajes'
 
 export default class Router extends Component {
     render() {
@@ -14,8 +15,9 @@ export default class Router extends Component {
                 <Menu />
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path="/serie/:idseries" element={<LoadSerie />} />
+                    <Route path="/serie/:idSerie" element={<LoadSerie />} />
                     <Route path='/create' element={<CreatePersonaje />} />
+                    <Route path="/personajes/:idSerie" element={<LoadPersonajes />} />
                     <Route path='/update' element={<UpdatePersonaje />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
